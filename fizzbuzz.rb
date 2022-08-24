@@ -1,22 +1,6 @@
-# frozen_string_literal: true
-
-def basic
-  (1..100).each do |i|
-    if (i % 3).zero? && (i % 5).zero?
-      puts 'FizzBuzz'
-    elsif (i % 5).zero?
-      puts 'Buzz'
-    elsif (i % 3).zero?
-      puts 'Fizz'
-    else
-      puts i
-    end
-  end
-end
-
-def advanced(from, to)
+def fizzbuzz(from, to)
   (from..to).each do |i|
-    # @type [Array<String>]
+
     result = []
 
     result.append('Fizz') if (i % 3).zero?
@@ -41,4 +25,4 @@ def advanced(from, to)
   end
 end
 
-advanced(255200, 255255)
+fizzbuzz(1, 300)
